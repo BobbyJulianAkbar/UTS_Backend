@@ -1,0 +1,35 @@
+@baseurl = http://127.0.0.1:3001
+
+###
+GET {{baseurl}}/komputer
+
+### 
+POST {{baseurl}}/komputer
+
+{
+    "name": "Sepatu High Heels Elegan",
+    "description": "High heels elegan untuk acara formal.",
+    "price": 700000,
+    "image_url": "https://example.com/images/sepatu_high_heels.jpg",
+    "stock": 10
+}
+
+
+
+### 
+PUT {{baseurl}}/komputer/1
+
+{
+    "name": "Sepatu High Heels Elegan",
+    "description": "High heels elegan untuk acara formal.",
+    "price": 700000,
+    "image_url": "https://example.com/images/sepatu_high_heels.jpg",
+    "stock": 10
+}
+
+
+### 
+DELETE {{baseurl}}/komputer/1
+
+### 
+GET {{baseurl}}/komputer/2

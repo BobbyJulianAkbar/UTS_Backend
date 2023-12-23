@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package buku;
+
+message Buku {
+    int32 id = 1;
+    string name = 2;
+    string description = 3;
+    int32 price = 4;
+    string image_url = 6;
+    int32 stock = 7;
+}
+
+message BukuListRequest {
+}
+
+message BukuListResponse {
+    repeated Buku bukus = 1;
+}
+
+message BukuRequest {
+    int32 id = 1;
+}
+
+message BukuResponse {
+    Buku buku = 1;
+}
+
+message BukuCreateRequest {
+    string name = 1;
+    string description = 2;
+    int32 price = 3;
+    string image_url = 4;
+    int32 stock = 5;
+}
+
+message BukuCreateResponse {
+    Buku buku = 1;
+}
+
+message BukuUpdateRequest {
+    int32 id = 1;
+    string name = 2;
+    string description = 3;
+    int32 price = 4;
+    string image_url = 5;
+    int32 stock = 6;
+}
+
+message BukuUpdateResponse {
+    Buku buku = 1;
+}
+
+message BukuDeleteRequest {
+    int32 id = 1;
+}
+
+message BukuDeleteResponse {
+    string message = 1;
+}
+
+service BukuService {
+    rpc List(BukuListRequest) returns (BukuListResponse);
+    rpc Get(BukuRequest) returns (BukuResponse);
+    rpc Create(BukuCreateRequest) returns (BukuCreateResponse);
+    rpc Update(BukuUpdateRequest) returns (BukuUpdateResponse);
+    rpc Delete(BukuDeleteRequest) returns (BukuDeleteResponse);
+}

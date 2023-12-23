@@ -1,4 +1,4 @@
-CARA MENJALANKAN
+# CARA MENJALANKAN
 
 1. Buat database dengan nama "utsbackendjo"
 2. buka terminal di folder ini dan jalankan
@@ -23,3 +23,11 @@ CARA MENJALANKAN
 - .\env\Scripts\pserv development.ini --reload
 
 5. jalankan frontend dengan cara membuka terminal baru dan arahkan ke folder frontend dan ikuti instruksi di folder tersebut
+
+# Dependencies
+- grpcio
+- grpcio-tools
+- alembic
+- PyMySQL
+- SQLAlchemy
+- mysql-connector-python
